@@ -8,7 +8,7 @@ const forecast = (latitude, longitude, callback) => {
             callback('Unable to connect to location services!', undefined)
         } else if (response.body.error) {
             callback('Unable to find location. Try another search', undefined)
-        } else callback(undefined, 'It is currently ' + response.body.main.temp + ' degrees out. It feels like ' + response.body.main.feels_like + ' degrees out')
+        } else callback(undefined, 'It is currently ' + response.body.main.temp + ' degrees out. It feels like ' + response.body.main.feels_like + ' degrees out. The high temp will be ' + response.body.main.temp_max + '.')
     })
 }
 
